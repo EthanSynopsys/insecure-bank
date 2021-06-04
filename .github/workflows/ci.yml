@@ -18,3 +18,20 @@ jobs:
     - name: Run tests
       run: mvn -B package
 
+    - name: Black Duck Scanner
+      # You may pin to the exact commit or the version.
+      # uses: philips-labs/blackduck-scanner-action@f8a604ccb9df9a6450b35ac102b30c5b00958d87
+      uses: philips-labs/blackduck-scanner-action@v1.3
+      with:
+        # Blackduck project name
+        projectName: insecure-bank_github_actions
+        # Blackduck project version prefix
+        versionPrefix: 
+        # Blackduck url
+        url: https://testing.blackduck.synopsys.com/
+        # Blackduck token
+        token: secrets.BD_TOKEN
+        # sourcePath
+        sourcePath: ./
+        # Extra arguments that will be passed to the detector
+        extraArgs:
