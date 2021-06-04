@@ -26,7 +26,7 @@ jobs:
         # Blackduck project name
         projectName: insecure-bank_github_actions
         # Blackduck project version prefix
-        versionPrefix: 
+        versionPrefix: 1
         # Blackduck url
         url: https://testing.blackduck.synopsys.com/
         # Blackduck token
